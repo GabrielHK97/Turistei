@@ -1,0 +1,22 @@
+npm init -y
+npm install express
+npm i --save-dev @types/express
+npm install typescript -d
+npm install ts-node-dev -d
+npm install typeorm
+npm install sqlite3  
+npx tsc --init
+create src folder and server.ts inside it and paste the code:
+
+    import express from 'express';
+    const server = express();
+    server.listen(3333);
+
+on package.json add the following on the script section:
+    
+    "start": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules?typeorm/cli.js"
+    
+to run use npm start 
+
+Kayak, Expedia, SkyScanner, AirBnB, Booking.com, Hotels.com, Uber, Lyft, 99Taxi, Cabify
